@@ -1,0 +1,8 @@
+==cacsada-relay3==
+This device has 3 relays, one for the pond[0], one for the water to the center of the garden[2], and one for the water over by the bridges[1].
+
+The GET query that the server parses is of the form:
+
+  10.0.1.186/?status=ON&relay=2&til=60
+
+The returned web page should give the current status of the device or all the devices. Ideally just asking 10.0.1.186/?relay=2 should send back info as to whether it is on and how much time is left on its timer. A JSON string with the status and timeleft on each relay would be great. Perhaps this is a rewrite of the logic and I need to create another directory.
